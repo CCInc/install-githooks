@@ -8,7 +8,7 @@ fi
 
 for HOOK in commit-msg
 do
-    if [ -d ".git/hooks/$HOOK" ]; then
+    if [ -f ".git/hooks/$HOOK" ]; then
         read -p "Warning! The hook $HOOK already exists, do you want to override it? " -n 1 -r
         echo    # (optional) move to a new line
         if [[ $REPLY =~ ^[Yy]$ ]]
