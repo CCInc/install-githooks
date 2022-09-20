@@ -20,7 +20,7 @@ if branch.lower().startswith('feat-'):
     with open(commit_msg_filepath, 'r') as f:
         commit_msg = f.read()
         
-    if not commit_msg.lower().startswith(required_message):
+    if not commit_msg.lower().startswith(required_message.lower()):
         print("commit-msg: ERROR! The commit message must start with '%s'" % required_message)
 
         out_msg = f"{required_message}: {commit_msg}"
